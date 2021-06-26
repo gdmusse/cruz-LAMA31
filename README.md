@@ -22,7 +22,7 @@ JWT_KEY =
 
 3. `npm run dev` para rodar o server com auto-update.
 
-### Endpoints
+## Endpoints
 
 ### Signup de usuário
 * Método: POST
