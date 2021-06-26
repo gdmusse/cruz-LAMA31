@@ -2,8 +2,30 @@ POST http://localhost:3000/user/signup
 Content-Type: application/json
 
 {
-    "email": "gabriel@g.com",
-    "name": "Gabriel",
+    "email": "das@g.com",
+    "name": "Daniel",
     "password": "123abc",
-    "role": "ADMIN"
+    "role": "NORMAL"
+}
+
+###
+
+POST http://localhost:3000/user/login
+Content-Type: application/json
+
+{
+    "email": "gabriel@g.com",
+    "password": "123abc"
+}
+
+###
+
+POST http://localhost:3000/band/register
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjllNjUxYzUzLWY1M2MtNDZmMS04ZTkxLTZiMzllZjJlOWVkMSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYyNDY3MzY2NiwiZXhwIjoxNjI0Njc5MDY2fQ.TG-RA3j1e_rpcADAHfYX-jUZDKwJlynJAUubJidRfUc
+Content-Type: application/json
+
+{
+    "name": "Shawn Mendes",
+    "musicGenre": "Pop",
+    "responsible": ""
 }
