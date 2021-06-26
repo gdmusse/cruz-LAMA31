@@ -24,7 +24,8 @@ JWT_KEY =
 
 ## Endpoints
 
-### Signup de usuário
+### Usuário
+#### Signup de usuário
 * Método: POST
     * Path: `/user/signup`
     * Entradas:
@@ -37,7 +38,7 @@ JWT_KEY =
         * Body
             * access token
             
-### Login de usuário
+#### Login de usuário
 * Método: POST
     * Path: `/user/login`
     * Entradas:
@@ -48,7 +49,8 @@ JWT_KEY =
         * Body
             * access token
             
-### Registrar banda
+### Banda            
+#### Registrar banda
 * Método: POST
     * Path: `/band/register`
     * Entradas:
