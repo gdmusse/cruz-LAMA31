@@ -25,7 +25,6 @@ export class UserBusiness {
     if (user.password.length < 6) {
       throw new BaseError(422, "Invalid password");
     }
-
   
     const id = this.idGenerator.generate();
 
@@ -40,7 +39,8 @@ export class UserBusiness {
         User.stringToUserRole(user.role)
       )
     );
-
+    
+ 
     const accessToken = this.authenticator.generateToken({
       id,
       role: user.role,

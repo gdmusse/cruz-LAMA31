@@ -1,6 +1,6 @@
 import { UserRole } from "../../src/model/User";
 
-export class TokenGeneratorMock {
+export class AuthenticatorMock {
   public generateToken = (input: AuthenticationData): string => {
     return "token_mock"
   };
@@ -8,7 +8,7 @@ export class TokenGeneratorMock {
   public getData(token: string) {
     return {
       id: "id_mock",
-      role: UserRole.NORMAL
+      role: UserRole.ADMIN
     }
   }
 }
@@ -18,4 +18,4 @@ export interface AuthenticationData {
   role: string;
 }
 
-export default new TokenGeneratorMock()
+export default new AuthenticatorMock();

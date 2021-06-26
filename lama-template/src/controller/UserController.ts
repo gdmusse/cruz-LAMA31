@@ -16,7 +16,17 @@ export class UserController {
 
       res.status(200).send({ token });
     } catch (error) {
-      res.status(error.statusCode).send({ error: error.message });
+      if(!error.statusCode){
+        error.statusCode = 400
+      }
+      if (error.message.includes("Duplicate entry")) {
+        res
+          .status(409)
+          .send({ error: "This email is already registered" });
+      } else {
+        res.status(error.statusCode).send({ error: error.message });
+      }
+      
     }
 
     await BaseDatabase.destroyConnection();
@@ -33,6 +43,9 @@ export class UserController {
 
       res.status(200).send({ token });
     } catch (error) {
+      if(!error.statusCode){
+        error.statusCode = 400
+      }
       res.status(error.statusCode).send({ error: error.message });
     }
 

@@ -1,3 +1,5 @@
+import { BaseError } from "../error/BaseError";
+
 export class User{
     constructor(
     private id: string,
@@ -54,7 +56,7 @@ export class User{
             case "ADMIN":
               return UserRole.ADMIN;
             default:
-              throw new Error("Invalid user role");
+                throw new BaseError(422, "Invalid user role");
           }
     }
 
