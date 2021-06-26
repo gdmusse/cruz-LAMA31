@@ -95,7 +95,7 @@ JWT_KEY =
             * week_day (obrigatório)
     * Saídas:
         * Body
-            *[shows]
+         *[shows]
                * start_time
                * end_time
                * name
