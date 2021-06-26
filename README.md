@@ -95,10 +95,7 @@ JWT_KEY =
             * week_day (obrigatório)
     * Saídas:
         * Body
-             * start_time
-             * end_time
-             * name
-             * music_genre
+             * Shows (start_time, end_time, name e music_genre)
 
          
 
