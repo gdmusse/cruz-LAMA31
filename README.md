@@ -61,3 +61,45 @@ JWT_KEY =
             * musicGenre (obrigatório)
             * responsible (obrigatório)
 
+#### Visualizar detalhes da banda
+* Método: GET
+    * Path: `/band`
+    * Entradas:
+        * Query 
+            * name OU id
+    * Saídas:
+        * Body
+            * id
+            * name
+            * music_genre
+            * responsible
+
+### Show            
+#### Adicionar um show a um dia
+* Método: POST
+    * Path: `/show/add`
+    * Entradas:
+       * Headers 
+            * Authorization
+        * Body 
+            * band_id (obrigatório)
+            * start_time (obrigatório, number)
+            * end_time (obrigatório, number)
+            * week_day (obrigatório, "Friday", "Saturday" ou "Sunday")
+
+#### Pegar todos os shows de uma data
+* Método: GET
+    * Path: `/show/:week_day`
+    * Entradas:
+        * Params 
+            * week_day (obrigatório)
+    * Saídas:
+        * Body
+            *[shows]
+               * start_time
+               * end_time
+               * name
+               * music_genre
+
+         
+
