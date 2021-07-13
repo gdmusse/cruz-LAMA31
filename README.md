@@ -1,4 +1,4 @@
-### <p align="center">💻 LAMA - Labenu Musical Awards💻</p>
+<h1 align="center">💻 LAMA - Labenu Musical Awards💻</h1>
 
 ## Sobre
 Projeto de backend que utilizando Typescript e algumas dependências como Knex e Express. Sistema que permite o gerenciamento de usuários, bandas e shows.
